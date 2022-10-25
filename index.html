@@ -12,7 +12,7 @@
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
+            renderer="logarithmicDepthBuffer: true; gammaOutput: true;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
             embedded
@@ -37,14 +37,15 @@
             >
                 <a-entity
                     id="bowser-model"
-                    scale="2.3337359394463344 2.3337359394463344 2.3337359394463344"
+                    scale="5 5 5"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
             </a-marker>
-
+    <a-light type="ambient" color="#ffffff"></a-light>
+　　<a-light type="point" intensity="2" position="0 0 0"></a-light>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
